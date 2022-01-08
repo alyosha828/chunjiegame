@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv-"X-UA-Compatible" content="IE=edge" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+		<!--<meta name="viewport" content="user-scalable=0, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=160dpi" />-->
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+
+		<title>金鼠贺岁娃娃机</title>
+		
+		
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<link type="text/css" rel="stylesheet" href="css/separate.css" />
+		
+		<link rel="stylesheet" type="text/css" href="css/animation.css" />
+		
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	</head>
+    <body>
+		<div style="position: fixed;top: 0px;left: 0px;bottom: 0px;right: 0px;background-color: brown;">
+			
+			<div id="main_up" class="img_main_up" style="z-index: 20;">
+				<div id="tongs_head" class="img_tongs_head"></div>
+			</div>
+			<div id="main_middle" class="img_main_middle" style="z-index: 2;">
+			</div>
+			<div id="main_down" class="img_main_down" style="z-index: 20;">
+			</div>
+			
+			<div id="tongs" class="img_tongs" style="z-index: 3;">
+				<div id="total_tongs_hand" style="position:absolute;bottom: -59px;left: -6px;height: 97px;width: 47px;
+						-webkit-transform-origin: top center;
+						-ms-transform-origin: top center;
+						transform-origin: top center;
+						-webkit-animation: myswing 1s 1s;
+						animation-duration: 1s;
+						animation-timing-function: initial;
+						animation-delay: 0s;
+						animation-iteration-count: infinite;
+						animation-direction: initial;
+						animation-fill-mode: backwards;
+						-webkit-animation-fill-mode: backwards;
+						-webkit-animation-play-state: initial;
+						animation-play-state: paused;
+						animation-name: myswing;">
+					<div id="tongs_hand" class="img_tongs_hand">
+					</div>
+					<div id="tongs_hand1" class="img_tongs_hand1">
+					</div>
+					<div id="sel_mouse" class="img_sel_mouse"style="
+						-webkit-transform-origin: top center;
+						-ms-transform-origin: top center;
+						transform-origin: top center;
+						-webkit-animation: swing 1s 1s;
+						animation-duration: 1s;
+						animation-timing-function: initial;
+						animation-delay: 0s;
+						animation-iteration-count: 1;
+						animation-direction: initial;
+						animation-fill-mode: backwards;
+						-webkit-animation-fill-mode: backwards;
+						-webkit-animation-play-state: initial;
+						animation-play-state: initial;
+						animation-name: swing;
+					">
+					</div>
+				</div>
+				
+			</div>
+			<!--<div id="tongs_bar" class="img_tongs_bar">
+			</div>-->
+			
+			<div id="btn_left" class="btn_detail" style="position: fixed;
+														top: 76%;
+														left: 6.4%;
+														z-index: 21;
+														">
+			</div>
+			<div id="btn_right" class="btn_detail" style="position: fixed;
+														top: 76%;
+														right: 6.4%;
+														z-index: 21;
+														">
+			</div>
+			<div id="btn_go" class="btn_detail_go" style="position: fixed;
+														top: 74%;
+														left: 35%;
+														z-index: 21;
+														">
+														
+			</div>
+		</div>
+
+		<div class='cv'></div>
+		<div id = 'result_back' class='tk' style="
+				z-index: 101;
+				-webkit-animation: bounceInUp 1s 1s;
+				animation-duration: 1s;
+				animation-timing-function: initial;
+				animation-delay: 0s;
+				animation-iteration-count: 1;
+				animation-direction: initial;
+				animation-fill-mode: backwards;
+				-webkit-animation-fill-mode: backwards;
+				-webkit-animation-play-state: initial;
+				animation-play-state: initial;
+				animation-name: bounceInUp;
+				">
+			<div class="btn_close_result btn_"></div>
+			<div class="btn_result btn_">
+				<a href="result.html" style="position: absolute;width: 100%;height: 100%;"></a>
+			</div>
+			<div class="btn_share_result btn_"></div>
+		</div>
+		<div id='again_f' class="again_fail" style="
+						z-index: 101;
+						-webkit-animation: bounceInUp 1s 1s;
+						animation-duration: 1s;
+						animation-timing-function: initial;
+						animation-delay: 0s;
+						animation-iteration-count: 1;
+						animation-direction: initial;
+						animation-fill-mode: backwards;
+						-webkit-animation-fill-mode: backwards;
+						-webkit-animation-play-state: initial;
+						animation-play-state: initial;
+						animation-name: bounceInUp;
+						">
+			<div class="btn_again btn_"></div>
+		</div>
+		<audio id="backgroundAudio" src="css/music/back.mp3" autostart="True" preload="auto" loop style="display:block"></audio>
+		<audio id="successAudio" src="css/music/success.mp3" autostart="True" preload="auto" style="display:block"></audio>
+		<audio id="failedAudio" src="css/music/failed.mp3" autostart="True" preload="auto" style="display:block"></audio>
+		<audio id="ropeAudio" src="css/music/back.mp3" autostart="True" preload="auto" style="display:block"></audio>
+		<audio id="buttonAudio" src="css/music/button.mp3" autostart="True" preload="auto" style="display:block"></audio>
+		
+
+		<script type="text/javascript" src="js/display.js"></script>
+		<script type="text/javascript" src="js/playsound.js"></script>
+	</body>
+</html>

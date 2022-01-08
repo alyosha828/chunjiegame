@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	margin:0px;
+	padding:0px;
+	overflow : hidden;
+	background-color:#000000;
+}
+
+@media only screen and (min-device-width : 480px) {
+	body{
+		margin-top:0px;
+	}
+}
+
+@media only screen and (min-device-width : 1040px) {
+	body{
+		//background:url("../img/background.jpg") no-repeat;
+		overflow:hidden;
+		//background-color:#FF0000;
+	}
+}/*
+#loading {
+	width:640px;
+    height:1040px;
+    position:fixed;
+    z-index:9999;
+	left:50%;
+	top:0px;
+    background:url(../img/loading.gif) no-repeat center center ;
+	background-size:100% 100%;
+	background-size:cover;
+	margin:0px 0px 0px -320px;
+}*/
+
+
+button:focus{outline:0px;}
+
+
